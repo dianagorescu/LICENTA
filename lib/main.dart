@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:thrifty/pages/login_page.dart';
+import 'package:thrifty/pages/register_page.dart';
+import 'package:thrifty/themes/light_mode.dart';
+
+import 'auth/login_or_register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: lightMode,
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: LoginOrRegisterPage(),
     );
   }
 }
