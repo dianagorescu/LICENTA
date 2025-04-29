@@ -1,11 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:thrifty/firebase_options.dart';
 import 'package:thrifty/pages/login_page.dart';
 import 'package:thrifty/pages/register_page.dart';
 import 'package:thrifty/themes/light_mode.dart';
 
 import 'auth/login_or_register.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 

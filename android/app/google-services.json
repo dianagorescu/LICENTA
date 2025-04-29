@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "442579709675",
+    "project_id": "thrifttracker-3f14f",
+    "storage_bucket": "thrifttracker-3f14f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442579709675:android:7e12d2a84ade275eb858ae",
+        "android_client_info": {
+          "package_name": "com.example.thrifty"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnr5DmQbDkSTgESXOLwHXGKQoakfGO4pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
