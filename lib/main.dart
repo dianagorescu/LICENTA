@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:thrifty/auth/auth_gate.dart';
 import 'package:thrifty/firebase_options.dart';
 import 'package:thrifty/pages/login_page.dart';
 import 'package:thrifty/pages/register_page.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: lightMode,
       debugShowCheckedModeBanner: false,
-      home: LoginOrRegisterPage(),
+      home: AuthGate(),
     );
   }
 }

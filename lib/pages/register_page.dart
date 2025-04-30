@@ -1,4 +1,7 @@
+import 'dart:core';
+
 import 'package:flutter/material.dart';
+import 'package:thrifty/auth/auth_service.dart';
 import 'package:thrifty/components/my_button.dart';
 import 'package:thrifty/components/my_textfield.dart';
 
@@ -10,12 +13,39 @@ class RegisterPage extends StatelessWidget {
   // tap to go to the login page
   final void Function()? onTap;
 
-
-  RegisterPage({super.key,
-  required this.onTap});
+  RegisterPage({super.key, required this.onTap});
 
   // register method
-  void register() {}
+  void register(BuildContext context) {
+    final _auth = AuthService();
+
+    // pass match --->creating user
+    if (_passController == _confPassController) {
+      try {
+        _auth.signUpWithEmailAndPassword(
+          _emailController.text,
+          _passController.text,
+        );
+      } catch (e) {
+        showDialog(
+          context: context,
+          builder: (context) =>
+              AlertDialog(
+                  title: Text(e.toString())
+              ),
+        );
+      }
+    }
+    else {
+      showDialog(
+        context: context,
+        builder: (context) =>
+        const AlertDialog(
+            title: Text("Pass don't match")
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +103,7 @@ class RegisterPage extends StatelessWidget {
             const SizedBox(height: 25),
 
             // login button
-            MyButton(text: "Register", onTap: register),
+            MyButton(text: "Register", onTap: () => register(context)),
 
             const SizedBox(height: 25),
 
