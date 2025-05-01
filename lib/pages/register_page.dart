@@ -20,7 +20,7 @@ class RegisterPage extends StatelessWidget {
     final _auth = AuthService();
 
     // pass match --->creating user
-    if (_passController == _confPassController) {
+    if (_passController.text == _confPassController.text) {
       try {
         _auth.signUpWithEmailAndPassword(
           _emailController.text,
@@ -123,7 +123,7 @@ class RegisterPage extends StatelessWidget {
                     "Sign in",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.primary,
+                      color: Colors.blue,
                     ),
                   ),
                 ),
