@@ -58,7 +58,7 @@ class RegisterPage extends StatelessWidget {
           children: [
             //logo
             Icon(
-              Icons.message,
+              Icons.lock,
               size: 66,
               color: Theme.of(context).colorScheme.primary,
             ),
