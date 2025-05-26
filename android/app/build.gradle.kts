@@ -33,6 +33,11 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+    packaging {
+        resources {
+            excludes += listOf("META-INF/DEPENDENCIES")
+        }
+    }
 
     buildTypes {
         release {

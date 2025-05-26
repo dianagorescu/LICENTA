@@ -1,0 +1,1 @@
+-keep class dev.fluttercommunity.arcgis_map_sdk.** { *; }

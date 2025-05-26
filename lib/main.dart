@@ -4,6 +4,7 @@ import 'package:thrifty/auth/auth_gate.dart';
 import 'package:thrifty/firebase_options.dart';
 import 'package:thrifty/pages/login_page.dart';
 import 'package:thrifty/pages/register_page.dart';
+import 'package:thrifty/themes/dark_mode.dart';
 import 'package:thrifty/themes/light_mode.dart';
 
 import 'auth/login_or_register.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: lightMode,
+      darkTheme: darkMode,
       debugShowCheckedModeBanner: false,
       home: const AuthGate(),
     );
